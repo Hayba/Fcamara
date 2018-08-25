@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercício 02</title>
+
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var n1;
+		var n2;
+		var primos = [];
+		var cont = 0;
+		var i,j;     
+        do{ 	
+            n1 = prompt("Digite um valor maior que 0: ");
+            n2 = prompt("Digite um valor maior que o inicial: ");
+            if(n1 <= 0 || n2<=n1){
+            	alert("Digite certo!");
+            }
+        /*
+        Não consegui fazer com que o laço excluísse as métricas para que apenas sobrasse o numero primo.
+		Porém, queria que, assim que achado, colocado numa matriz, e unto dele, um espaçamento, como o enunciado pedia, e
+		apresentado ao final em um array.
+        */
+        }while(n1<=0 || n2<=n1);
+	    	for(n1;n1<=n2;n1++){
+	    		for(i = 1; i<=n1; i++){
+	    			if(n1%i == 0){
+	    				cont++;
+	    			}
+	    		}
+	    		if(cont <= 2){
+	    			primos.push(" " + n1);
+	    			cont=0;
+	    		}
+	    		
+	    	}
+	    alert(primos);
+	
+	</script>
+</body>
+</html>

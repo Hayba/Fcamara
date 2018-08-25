@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício 05</title>
+
+
+
+</head>
+<body>
+	<script type="text/javascript">
+	class Conta{
+		contructor( conta, nome, saldo){
+			this.conta = conta;
+			this.nome = nome;
+			this.saldo = saldo;
+		}
+		get altNome(){
+			return this.alteraNome()
+		}
+
+		alteraNome(){
+			return this.nome = b;
+		}
+
+		get deposito(){
+			return this.valor()
+		}
+
+		valor(){
+			
+			return this.saldo + parseInt(dinheiro);
+		}
+
+		get saque(){
+			return this.retirada()
+		}
+
+		retirada(){
+
+			return this.saldo - parseInt(dinheiro);
+		}
+	}
+
+	var a = Conta.conta = prompt("Digite o número da conta:");
+
+	var b = Conta.nome = prompt("Digite o nome do titular:");
+	var c = Conta.saldo;
+	var dinheiro = 0;
+	const conta = new Conta(a,b,c);
+	conta.saldo = 0;
+	var cont = "5";
+	do{
+		cont = prompt("Escolha uma opção:\n1-Alterar Nome\n2-Depósito\n3-Retirada\n4-Saldo\n0-sair");
+		switch(cont){
+			case "1":
+				b = prompt("Digite o nome do titular:");
+				conta.nome = conta.altNome;
+				alert(conta.nome);
+				break;
+			case "2":
+				dinheiro = prompt("Digite valor do depósito");
+				if (dinheiro < 0){
+					alert("Favor digitar um valor válido!");
+				}else{
+					conta.saldo = conta.deposito;
+					alert("Valor depositado: R$" + dinheiro + "\nValor da conta atual: R$" + conta.saldo);
+				}
+				break;
+			case "3":
+				dinheiro = prompt("Digite o valor a ser retirado:");
+				if(dinheiro < 0){
+					alert("favor digita um valor válido!");
+				}else{
+					if(dinheiro > conta.saldo){
+						alert("Valor invalido!");
+					}else{
+						conta.saldo = conta.saque;
+						alert("valor retirado: R$" + dinheiro + "\nValor atual da conta: R$"+ conta.saldo);
+					}
+				}	
+				break;
+			case "4":
+				alert("Valor em conta: R$" + conta.saldo);
+				break;
+			case "0":
+				alert("Saindo...");
+				break;
+			default:
+				alert("Opção Inválida!");
+		}
+	}while(cont!=0);
+	</script>
+</body>
+</html>

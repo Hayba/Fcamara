@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício 6</title>
+	
+</head>
+<body>
+	<script type="text/javascript">
+			class Retangulo {
+	    		constructor(altura, largura) {
+	     		this.altura = altura; 
+	     		this.largura = largura;
+	    	}
+
+	   		get area() {
+	        	return this.calculaArea()  
+	    	}  
+
+	    	calculaArea() {  
+	        	return this.altura * this.largura;  
+	    	}
+
+	    	get perimetro() {
+	    		return this.calcularPerimetro()
+	    	}
+
+	    	calcularPerimetro(){
+	    		this.altura;
+	    		this.largura;
+	    		return (this.altura * 2)+(this.largura *2);
+	    	}
+		}
+		var a =prompt("Digite a altura da peça");
+		this.altura = a;
+		var b =prompt("Digite a largura da peça");
+		this.largura = b;
+		const quadrado = new Retangulo(a,b);
+		
+		var a =prompt("Digite a largura do local:");
+		this.altura = a;
+		var b =prompt("Digite o comprimento do local:");
+		this.largura = b;
+		const local = new Retangulo(a,b);
+
+		var area = local.area/quadrado.area
+		alert("Total de peças na área será: " + area);
+		//como o exercício não fala qual deve ser a altura do rodapé em relação ao piso, foi calculado com base na largura do mesmo.
+		var per = local.perimetro/quadrado.largura;
+		alert("O total de peças nos rodapés será: " + per);
+	</script>
+</body>
+</html>
